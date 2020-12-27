@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const HelloWorld = () => {
-  return <p>Hellooo World!</p>
+// functional component / stateless component
+function HelloComponent() {
+  return <p>Hello Functional Component!</p>
 }
 
 ReactDOM.render(
   <React.StrictMode>
-    <p>Hello World from React DOM</p>
+    <HelloComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
