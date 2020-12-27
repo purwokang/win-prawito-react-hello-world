@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import HelloComponent from './component/HelloComponent';
 
-// functional component / stateless component
-const HelloComponent = () => { //mengubah function menjadi arrow function
-  return <p>Hello Functional Component!</p>
-}
+
 
 // class component / statefull component
 class StateFullComponent extends React.Component {
@@ -18,7 +16,7 @@ class StateFullComponent extends React.Component {
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateFullComponent />
+    <HelloComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
