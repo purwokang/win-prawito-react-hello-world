@@ -9,9 +9,16 @@ const HelloComponent = () => { //mengubah function menjadi arrow function
   return <p>Hello Functional Component!</p>
 }
 
+// class component / statefull component
+class StateFullComponent extends React.Component {
+  render() {
+    return <p>Hello from StateFull Component</p>
+  }
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <HelloComponent />
+    <StateFullComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
