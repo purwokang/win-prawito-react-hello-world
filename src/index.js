@@ -5,10 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HelloComponent from './component/HelloComponent';
 import StateFullComponent from './container/StateFullComponent';
+import YouTubeComp from './component/YouTubeComp/YouTubeComp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelloComponent />
+    <YouTubeComp />
   </React.StrictMode>,
   document.getElementById('root')
 );
