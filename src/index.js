@@ -8,7 +8,7 @@ import StateFullComponent from './container/StateFullComponent';
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateFullComponent />
+    <HelloComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
