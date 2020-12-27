@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // functional component / stateless component
-function HelloComponent() {
+const HelloComponent = () => { //mengubah function menjadi arrow function
   return <p>Hello Functional Component!</p>
 }
 
