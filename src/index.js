@@ -10,7 +10,7 @@ const HelloWorld = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelloWorld />
+    <p>Hello World from React DOM</p>
   </React.StrictMode>,
   document.getElementById('root')
 );
