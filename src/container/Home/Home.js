@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
+import Product from '../Product/Product';
 
 class Home extends Component {
     render() {
@@ -24,6 +25,9 @@ class Home extends Component {
                     title='Tutorial React JS - Bagian 4'
                     desc='230x ditonton. 100 hari yang lalu.' />
                 <YouTubeComp />
+                <p>Counter</p>
+                <hr />
+                <Product />
             </div>
         )
     }
