@@ -37,3 +37,11 @@ p.title {
   margin-top: 10px;
   color: #2d2d22;
 }
+
+p.desc {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px;
+  margin-bottom: 20px;
+  color: #2d2d22;
+}
