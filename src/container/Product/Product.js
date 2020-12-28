@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import CardProduct from '../CardProduct/CardProduct';
 import './Product.css'
 
 class Product extends Component {
@@ -33,18 +34,7 @@ class Product extends Component {
                         <div className="count">{this.state.order}</div>
                     </div>
                 </div>
-                <div className="card">
-                    <div className="img-thumb-prod">
-                        <img src="https://s3-ap-southeast-1.amazonaws.com/etanee-images/product/colonel_ori_pack10.jpg" alt="product_image" />
-                    </div>
-                    <p className="product-title">Daging Ayam Berbumbu Rasa Original plus Tepung Crispy[1 Carton - 10 Pack]</p>
-                    <p className="product-price">Rp 41.000</p>
-                    <div className="counter">
-                        <button className="minus" onClick={this.handleMinus} >-</button>
-                        <input type="text" className='input-counter' value={this.state.order} />
-                        <button className="plus" onClick={this.handlePlus} >+</button>
-                    </div>
-                </div>
+                <CardProduct />
             </Fragment>
         )
     }

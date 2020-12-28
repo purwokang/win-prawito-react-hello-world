@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Product.css'
 
 class CardProduct extends Component {
     state = {
