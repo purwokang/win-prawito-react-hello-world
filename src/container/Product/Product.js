@@ -8,18 +8,10 @@ class Product extends Component {
         name: "Kang Purwo"
     }
 
-    handlePlus = () => {
+    handleCounterChange = (newValue) => {
         this.setState({
-            order: this.state.order + 1
+            order: newValue
         })
-    }
-
-    handleMinus = () => {
-        if (this.state.order > 0) {
-            this.setState({
-                order: this.state.order - 1
-            })
-        }
     }
 
     render() {
@@ -34,7 +26,7 @@ class Product extends Component {
                         <div className="count">{this.state.order}</div>
                     </div>
                 </div>
-                <CardProduct />
+                <CardProduct onCounterChange={(value) => this.handleCounterChange(value)} />
             </Fragment>
         )
     }

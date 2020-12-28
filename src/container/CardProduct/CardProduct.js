@@ -6,16 +6,25 @@ class CardProduct extends Component {
         name: "Kang Purwo"
     }
 
+    handleCounterChange = (newValue) => {
+        this.props.onCounterChange(newValue);
+    }
+
     handlePlus = () => {
         this.setState({
             order: this.state.order + 1
+        }, () => {
+            this.handleCounterChange(this.state.order);
         })
+
     }
 
     handleMinus = () => {
         if (this.state.order > 0) {
             this.setState({
                 order: this.state.order - 1
+            }, () => {
+                this.handleCounterChange(this.state.order);
             })
         }
     }
