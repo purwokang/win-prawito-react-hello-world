@@ -8,17 +8,15 @@ class Product extends Component {
     }
 
     handlePlus = () => {
-        console.log('plus: ', this);
-        // this.setState({
-        //     order: this.state.order + 1
-        // })
+        this.setState({
+            order: this.state.order + 1
+        })
     }
 
-    handleMinus() {
-        console.log('minus: ', this);
-        // this.setState({
-        //     order: this.state.order - 1
-        // })
+    handleMinus = () => {
+        this.setState({
+            order: this.state.order - 1
+        })
     }
 
     render() {
