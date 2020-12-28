@@ -3,19 +3,22 @@ import './Product.css'
 
 class Product extends Component {
     state = {
-        order: 4
+        order: 4,
+        name: "Kang Purwo"
     }
 
     handlePlus = () => {
-        this.setState({
-            order: this.state.order + 1
-        })
+        console.log('plus: ', this);
+        // this.setState({
+        //     order: this.state.order + 1
+        // })
     }
 
     handleMinus() {
-        this.setState({
-            order: this.state.order - 1
-        })
+        console.log('minus: ', this);
+        // this.setState({
+        //     order: this.state.order - 1
+        // })
     }
 
     render() {
