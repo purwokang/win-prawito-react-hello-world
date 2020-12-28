@@ -14,9 +14,11 @@ class Product extends Component {
     }
 
     handleMinus = () => {
-        this.setState({
-            order: this.state.order - 1
-        })
+        if (this.state.order > 0) {
+            this.setState({
+                order: this.state.order - 1
+            })
+        }
     }
 
     render() {
