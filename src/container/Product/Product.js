@@ -7,12 +7,15 @@ class Product extends Component {
     }
 
     handlePlus = () => {
-        alert('Plus Button Clicked')
+        this.setState({
+            order: this.state.order + 1
+        })
     }
 
     handleMinus() {
-        alert('Minus Button Clicked')
-
+        this.setState({
+            order: this.state.order - 1
+        })
     }
 
     render() {
