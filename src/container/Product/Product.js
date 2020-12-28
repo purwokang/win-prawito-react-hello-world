@@ -5,6 +5,16 @@ class Product extends Component {
     state = {
         order: 4
     }
+
+    handlePlus = () => {
+        alert('Plus Button Clicked')
+    }
+
+    handleMinus() {
+        alert('Minus Button Clicked')
+
+    }
+
     render() {
         return (
             <Fragment>
@@ -24,9 +34,9 @@ class Product extends Component {
                     <p className="product-title">Daging Ayam Berbumbu Rasa Original plus Tepung Crispy[1 Carton - 10 Pack]</p>
                     <p className="product-price">Rp 41.000</p>
                     <div className="counter">
-                        <button className="minus">-</button>
+                        <button className="minus" onClick={this.handleMinus} >-</button>
                         <input type="text" className='input-counter' value={this.state.order} />
-                        <button className="plus">+</button>
+                        <button className="plus" onClick={this.handlePlus} >+</button>
                     </div>
                 </div>
             </Fragment>
