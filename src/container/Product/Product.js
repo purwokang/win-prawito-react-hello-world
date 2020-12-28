@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
+import './Product.css'
 
 class Product extends Component {
+    state = {
+        order: 4
+    }
     render() {
         return (
             <Fragment>
@@ -10,7 +14,7 @@ class Product extends Component {
                     </div>
                     <div className="troley">
                         <img src="https://etanee.id/img/icon/ic_cart_white.svg" alt="" />
-                        <div className="count">3</div>
+                        <div className="count">{this.state.order}</div>
                     </div>
                 </div>
                 <div className="card">
@@ -21,7 +25,7 @@ class Product extends Component {
                     <p className="product-price">Rp 41.000</p>
                     <div className="counter">
                         <button className="minus">-</button>
-                        <input type="text" value={3} />
+                        <input type="text" className='input-counter' value={this.state.order} />
                         <button className="plus">+</button>
                     </div>
                 </div>

@@ -93,11 +93,11 @@
 }
 
 .input-counter {
-  padding: 16px 8px;
+  padding: 15px 8px;
   border-radius: 0.4rem;
   outline: none;
-  border: 1px solid #2d3c8d;
-  color: #2d3c8d;
+  border: 1px solid grey;
+  color: grey;
   text-align: center;
   font-weight: 800;
   width: 10.5rem;
