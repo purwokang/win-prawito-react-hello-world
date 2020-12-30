@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
-import Product from '../Product/Product';
+// import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
+// import Product from '../Product/Product';
+import BlogPost from '../BlogPost/BlogPost';
 
 class Home extends Component {
     render() {
         return (
             <div>
-                <p>YouTube Component</p>
+                {/* <p>YouTube Component</p>
                 <hr />
                 <YouTubeComp
                     time='7.12'
@@ -24,10 +25,13 @@ class Home extends Component {
                     time='4.12'
                     title='Tutorial React JS - Bagian 4'
                     desc='230x ditonton. 100 hari yang lalu.' />
-                <YouTubeComp />
-                <p>Counter</p>
+                <YouTubeComp /> */}
+                {/* <p>Counter</p>
                 <hr />
-                <Product />
+                <Product /> */}
+                <p>Blog Post</p>
+                <hr />
+                <BlogPost />
             </div>
         )
     }
