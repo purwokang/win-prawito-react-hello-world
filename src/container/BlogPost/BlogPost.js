@@ -8,8 +8,23 @@ class BlogPost extends Component {
         post: []
     }
 
+    getPostAPI = () => {
+        axios.get('http://localhost:3004/posts/')
+            .then((result) => {
+                // console.log(result.data);
+                this.setState({
+                    post: result.data
+                })
+            })
+    }
+
     handleRemove = (data) => {
         console.log(data);
+        axios.delete(`http://localhost:3004/posts/${data}`)
+            .then((res) => {
+                console.log(res);
+                this.getPostAPI()
+            })
     }
 
     componentDidMount() {
@@ -20,13 +35,7 @@ class BlogPost extends Component {
         //             post: json
         //         })
         //     })
-        axios.get('http://localhost:3004/posts/')
-            .then((result) => {
-                // console.log(result.data);
-                this.setState({
-                    post: result.data
-                })
-            })
+        this.getPostAPI();
     }
 
     render() {
