@@ -37,15 +37,12 @@ class BlogPost extends Component {
     }
 
     handleFormChange = (event) => {
-        // console.log('form change', event);
-        // console.log('form change', event.target);
         let formBlogPostNew = { ...this.state.formBlogPost };
-        // console.log(event.target.name);
+        let timestamp = new Date().getTime();
+        formBlogPostNew['id'] = timestamp;
         formBlogPostNew[event.target.name] = event.target.value;
         this.setState({
             formBlogPost: formBlogPostNew
-        }, () => {
-            console.log('value obj formBlogPost: ', this.state.formBlogPost);
         })
     }
 
