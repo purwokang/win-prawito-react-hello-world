@@ -5,7 +5,14 @@ import './BlogPost.css';
 
 class BlogPost extends Component {
     state = {
-        post: []
+        post: [],
+        formBlogPost: {
+            id: 1,
+            title: '',
+            body: '',
+            userId: 1
+        }
+
     }
 
     getPostAPI = () => {
@@ -19,7 +26,9 @@ class BlogPost extends Component {
     }
 
     handleRemove = (data) => {
-        console.log(data);
+        // console.log(data);
+        // menjalankan server json di port 3004:
+        // json-server --watch db.json --port 3004
         axios.delete(`http://localhost:3004/posts/${data}`)
             .then((res) => {
                 console.log(res);
@@ -42,6 +51,13 @@ class BlogPost extends Component {
         return (
             <Fragment>
                 <p className="section-title">Blog Post</p>
+                <div className="form-add-post">
+                    <label htmlFor="title">Title</label>
+                    <input type="text" name="title" placeholder="add title" />
+                    <label htmlFor="body-content">Blog Content</label>
+                    <textarea name="body-content" id="body-content" cols="30" rows="10" placeholder="add blog content" ></textarea>
+                    <button className="btn-submit">Simpan</button>
+                </div>
                 {
                     this.state.post.map(post => {
                         return <Post key={post.id} data={post} remove={this.handleRemove} />
