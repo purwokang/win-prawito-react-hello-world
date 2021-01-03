@@ -41,9 +41,22 @@ class BlogPost extends Component {
         // json-server --watch db.json --port 3004
         axios.delete(`http://localhost:3004/posts/${data}`)
             .then((res) => {
-                console.log(res);
+                // console.log(res);
                 this.getPostAPI()
             })
+    }
+
+    handleUpdate = (data) => {
+        console.log(data);
+        this.setState({
+            formBlogPost: data
+        })
+        // axios.put(`http://localhost:3004/posts/${data}`, this.state.formBlogPost)
+        //     .then(res => {
+        //         console.log(res);
+        //         this.getPostAPI();
+        //     })
+
     }
 
     handleFormChange = (event) => {
@@ -73,14 +86,14 @@ class BlogPost extends Component {
                 <p className="section-title">Blog Post</p>
                 <div className="form-add-post">
                     <label htmlFor="title">Title</label>
-                    <input type="text" name="title" placeholder="add title" onChange={this.handleFormChange} />
+                    <input type="text" value={this.state.formBlogPost.title} name="title" placeholder="add title" onChange={this.handleFormChange} />
                     <label htmlFor="body">Blog Content</label>
-                    <textarea name="body" id="body" cols="30" rows="10" placeholder="add blog content" onChange={this.handleFormChange} ></textarea>
+                    <textarea name="body" id="body" cols="30" rows="10" value={this.state.formBlogPost.body} placeholder="add blog content" onChange={this.handleFormChange} ></textarea>
                     <button className="btn-submit" onClick={this.handleSubmit} >Simpan</button>
                 </div>
                 {
                     this.state.post.map(post => {
-                        return <Post key={post.id} data={post} remove={this.handleRemove} />
+                        return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} />
                     })
                 }
             </Fragment>
