@@ -25,6 +25,15 @@ class BlogPost extends Component {
             })
     }
 
+    postDataToAPI = () => {
+        axios.post('http://localhost:3004/posts/', this.state.formBlogPost)
+            .then((res) => {
+                console.log(res);
+            }, (err) => {
+                console.log('error: ', err);
+            })
+    }
+
     handleRemove = (data) => {
         // console.log(data);
         // menjalankan server json di port 3004:
@@ -48,7 +57,9 @@ class BlogPost extends Component {
     }
 
     handleSubmit = () => {
-        console.log(this.state.formBlogPost);
+        // console.log(this.state.formBlogPost);
+        this.postDataToAPI();
+
     }
 
     componentDidMount() {

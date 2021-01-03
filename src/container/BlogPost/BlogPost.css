@@ -47,7 +47,7 @@
 }
 
 .remove {
-    padding: 12px 18px;
+    padding: 10px 20px;
     background: red;
     color: white;
     border-radius: 4px;
@@ -57,6 +57,8 @@
 
 .remove:hover {
     cursor: pointer;
+    background: black;
+    color: white;
 }
 
 .form-add-post {
@@ -102,4 +104,6 @@ button.btn-submit {
 
 .btn-submit:hover {
     cursor: pointer;
+    background: #2196f3;
+    color: white;
 }
