@@ -11,7 +11,8 @@ class BlogPost extends Component {
             title: '',
             body: '',
             userId: 1
-        }
+        },
+        isUpdate: false
 
     }
 
@@ -35,6 +36,15 @@ class BlogPost extends Component {
             })
     }
 
+    putDataToAPI = () => {
+        axios.put(`http://localhost:3004/posts/${this.state.formBlogPost.id}`, this.state.formBlogPost)
+            .then(res => {
+                console.log(res);
+                this.getPostAPI();
+            })
+
+    }
+
     handleRemove = (data) => {
         // console.log(data);
         // menjalankan server json di port 3004:
@@ -49,21 +59,17 @@ class BlogPost extends Component {
     handleUpdate = (data) => {
         console.log(data);
         this.setState({
-            formBlogPost: data
+            formBlogPost: data,
+            isUpdate: true
         })
-        // axios.put(`http://localhost:3004/posts/${data}`, this.state.formBlogPost)
-        //     .then(res => {
-        //         console.log(res);
-        //         this.getPostAPI();
-        //     })
-
     }
 
     handleFormChange = (event) => {
         let formBlogPostNew = { ...this.state.formBlogPost };
         let timestamp = new Date().getTime();
-        // console.log(timestamp);
-        formBlogPostNew['id'] = timestamp;
+        if (!this.state.isUpdate) {
+            formBlogPostNew['id'] = timestamp;
+        }
         formBlogPostNew[event.target.name] = event.target.value;
         this.setState({
             formBlogPost: formBlogPostNew
@@ -71,8 +77,11 @@ class BlogPost extends Component {
     }
 
     handleSubmit = () => {
-        // console.log(this.state.formBlogPost);
-        this.postDataToAPI();
+        if (this.state.isUpdate) {
+            this.putDataToAPI()
+        } else {
+            this.postDataToAPI();
+        }
 
     }
 
