@@ -16,7 +16,7 @@ class BlogPost extends Component {
     }
 
     getPostAPI = () => {
-        axios.get('http://localhost:3004/posts/')
+        axios.get('http://localhost:3004/posts?_sort=id&_order=desc')
             .then((result) => {
                 // console.log(result.data);
                 this.setState({
@@ -29,6 +29,7 @@ class BlogPost extends Component {
         axios.post('http://localhost:3004/posts/', this.state.formBlogPost)
             .then((res) => {
                 console.log(res);
+                this.getPostAPI();
             }, (err) => {
                 console.log('error: ', err);
             })
