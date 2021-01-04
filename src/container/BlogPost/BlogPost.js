@@ -12,7 +12,8 @@ class BlogPost extends Component {
             body: '',
             userId: 1
         },
-        isUpdate: false
+        isUpdate: false,
+        tombolSimpan: 'simpan'
 
     }
 
@@ -60,7 +61,8 @@ class BlogPost extends Component {
         console.log(data);
         this.setState({
             formBlogPost: data,
-            isUpdate: true
+            isUpdate: true,
+            tombolSimpan: 'ubah'
         })
     }
 
@@ -98,7 +100,7 @@ class BlogPost extends Component {
                     <input type="text" value={this.state.formBlogPost.title} name="title" placeholder="add title" onChange={this.handleFormChange} />
                     <label htmlFor="body">Blog Content</label>
                     <textarea name="body" id="body" cols="30" rows="10" value={this.state.formBlogPost.body} placeholder="add blog content" onChange={this.handleFormChange} ></textarea>
-                    <button className="btn-submit" onClick={this.handleSubmit} >Simpan</button>
+                    <button className="btn-submit" onClick={this.handleSubmit} >{this.state.tombolSimpan}</button>
                 </div>
                 {
                     this.state.post.map(post => {
