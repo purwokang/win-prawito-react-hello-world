@@ -583,9 +583,15 @@
       "body": "cupiditate quo est a modi nesciunt soluta ipsa voluptas error itaque dicta in autem qui minus magnam et distinctio eum accusamus ratione error aut 2"
     },
     {
-      "id": 1609636428548,
-      "title": "Title Post 2 (diganti dengan tombol UBAH) - Works!",
-      "body": "Content Post 2 (Tombol UBAH sepertinya sudah Works!)",
+      "id": 1,
+      "title": "",
+      "body": "",
+      "userId": 1
+    },
+    {
+      "id": 1609744853896,
+      "title": "Tutorial ReactJS untuk Pemula 2",
+      "body": "Update data ke API dengan Method PUT 2",
       "userId": 1
     }
   ],

@@ -32,6 +32,14 @@ class BlogPost extends Component {
             .then((res) => {
                 console.log(res);
                 this.getPostAPI();
+                this.setState({
+                    formBlogPost: {
+                        id: 1,
+                        title: '',
+                        body: '',
+                        userId: 1
+                    }
+                })
             }, (err) => {
                 console.log('error: ', err);
             })
@@ -42,6 +50,16 @@ class BlogPost extends Component {
             .then(res => {
                 console.log(res);
                 this.getPostAPI();
+                this.setState({
+                    isUpdate: false,
+                    formBlogPost: {
+                        id: 1,
+                        title: '',
+                        body: '',
+                        userId: 1
+                    },
+                    tombolSimpan: 'simpan'
+                })
             })
 
     }
