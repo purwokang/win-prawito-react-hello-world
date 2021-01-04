@@ -37,3 +37,5 @@ class Home extends Component {
 }
 
 export default Home;
+
+// next video 20. mengirimkan params ke halaman detail React Router #13

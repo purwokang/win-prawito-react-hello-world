@@ -1,9 +1,10 @@
 import React from 'react';
+import '../../container/pages/BlogPost/BlogPost.css'
 
 const Post = (props) => {
     return (
         <div className="post">
-            <div className="img-thumb">
+            <div className="img-thumb-post">
                 <img src="http://placeimg.com/200/150/tech" alt="dummy" />
             </div>
             <div className="content">
