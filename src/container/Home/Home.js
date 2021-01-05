@@ -7,6 +7,7 @@ import Product from '../pages/Product/Product';
 import LifeCycleComp from '../pages/LifeCycleComp/LifeCycleComp';
 import BlogPost from '../pages/BlogPost/BlogPost';
 import YouTubeCompPage from '../pages/YouTubeCompPage/YouTubeCompPage';
+import DetailPost from '../pages/BlogPost/DetailPost/DetailPost';
 
 // style
 import './Home.css'
@@ -27,6 +28,7 @@ class Home extends Component {
                         <Link to="/youtube-component" >Youtube</Link>
                     </div>
                     <Route path="/" exact component={BlogPost} />
+                    <Route path="/detail-post/:id" component={DetailPost} />
                     <Route path="/product" component={Product} />
                     <Route path="/lifecycle" component={LifeCycleComp} />
                     <Route path="/youtube-component" component={YouTubeCompPage} />
@@ -38,4 +40,5 @@ class Home extends Component {
 
 export default Home;
 
+// json-server --watch db.json --port 3004
 // next video 20. mengirimkan params ke halaman detail React Router #13
