@@ -4,7 +4,7 @@ import './Product.css'
 
 class Product extends Component {
     state = {
-        order: 4,
+        order: 0,
         name: "Kang Purwo"
     }
 

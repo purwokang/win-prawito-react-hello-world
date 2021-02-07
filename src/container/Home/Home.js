@@ -42,3 +42,4 @@ export default Home;
 
 // json-server --watch db.json --port 3004
 // next video 20. mengirimkan params ke halaman detail React Router #13
+// next video 24
