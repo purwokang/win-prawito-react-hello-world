@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux';
 import YouTubeComp from '../../../component/YouTubeComp/YouTubeComp';
 
 class YouTubeCompPage extends Component {
@@ -24,9 +25,17 @@ class YouTubeCompPage extends Component {
           title='Tutorial React JS - Bagian 4'
           desc='230x ditonton. 100 hari yang lalu.' />
         <YouTubeComp />
+        <hr />
+        <p>Total Order: {this.props.order}</p>
       </Fragment>
     )
   }
 }
 
-export default YouTubeCompPage;
+const mapStateToProps = state => {
+  return {
+    order: state.totalOrder
+  }
+}
+
+export default connect(mapStateToProps)(YouTubeCompPage);
