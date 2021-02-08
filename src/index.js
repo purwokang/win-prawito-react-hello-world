@@ -8,16 +8,18 @@ import { Provider } from 'react-redux';
 import rootReducer from './redux/reducer/globalReducer';
 
 // Store
-const storeRedux = createStore(rootReducer);
+// const storeRedux = createStore(rootReducer);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={storeRedux}>
-      <Home />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Provider store={storeRedux}>
+//       <Home />
+//     </Provider>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+ReactDOM.render(<Home />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
