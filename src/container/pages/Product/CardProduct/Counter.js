@@ -35,9 +35,9 @@ class Counter extends Component {
     console.log(this.props);
     return (
       <div className="counter">
-        <button className="minus" onClick={this.props.handleMinus} >-</button>
-        <input type="text" className='input-counter' value={this.props.order} />
-        <button className="plus" onClick={this.props.handlePlus} >+</button>
+        <button className="minus" onClick={() => null} >-</button>
+        <input type="text" className='input-counter' value={0} />
+        <button className="plus" onClick={() => null} >+</button>
       </div>
     )
   }
@@ -56,4 +56,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+// export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default Counter;

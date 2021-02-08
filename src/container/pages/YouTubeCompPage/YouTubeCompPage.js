@@ -26,7 +26,7 @@ class YouTubeCompPage extends Component {
           desc='230x ditonton. 100 hari yang lalu.' />
         <YouTubeComp />
         <hr />
-        <p>Total Order: {this.props.order}</p>
+        <p>Total Order: {0}</p>
       </Fragment>
     )
   }
@@ -38,4 +38,5 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(YouTubeCompPage);
+// export default connect(mapStateToProps)(YouTubeCompPage);
+export default YouTubeCompPage;

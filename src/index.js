@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './container/Home/Home';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import rootReducer from './redux/reducer/globalReducer';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+// import rootReducer from './redux/reducer/globalReducer';
 
 // Store
 // const storeRedux = createStore(rootReducer);
