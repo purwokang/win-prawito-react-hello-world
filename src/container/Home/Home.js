@@ -12,18 +12,18 @@ import DetailPost from '../pages/BlogPost/DetailPost/DetailPost';
 // style
 import './Home.css'
 
-const RootContext = createContext();
+export const RootContext = createContext();
 const Provider = RootContext.Provider;
 
 class Home extends Component {
     state = {
-        showComponent: true
+        totalOrder: 5
     }
 
     render() {
         return (
             <Router>
-                <Provider>
+                <Provider value={this.state}>
                     <Fragment>
                         <div className="navigation">
                             <Link to="/" >Blog Post</Link>

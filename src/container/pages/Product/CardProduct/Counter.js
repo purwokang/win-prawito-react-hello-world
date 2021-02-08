@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ActionType from '../../../../redux/reducer/globalActionType';
+import { RootContext } from '../../../Home/Home';
+
+
+
+
+
 
 class Counter extends Component {
   // state = {
@@ -34,27 +40,36 @@ class Counter extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="counter">
-        <button className="minus" onClick={() => null} >-</button>
-        <input type="text" className='input-counter' value={0} />
-        <button className="plus" onClick={() => null} >+</button>
-      </div>
+      <RootContext.Consumer>
+        {
+          value => {
+            console.log('value: ', value)
+            return (
+              <div className="counter">
+                <button className="minus" onClick={() => null} >-</button>
+                <input type="text" className='input-counter' value={value.totalOrder} />
+                <button className="plus" onClick={() => null} >+</button>
+              </div>
+            )
+          }
+        }
+      </RootContext.Consumer>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    order: state.totalOrder
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     order: state.totalOrder
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handlePlus: () => dispatch({ type: ActionType.PLUS_ORDER }),
-    handleMinus: () => dispatch({ type: ActionType.MINUS_ORDER })
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     handlePlus: () => dispatch({ type: ActionType.PLUS_ORDER }),
+//     handleMinus: () => dispatch({ type: ActionType.MINUS_ORDER })
+//   }
+// }
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 export default Counter;
