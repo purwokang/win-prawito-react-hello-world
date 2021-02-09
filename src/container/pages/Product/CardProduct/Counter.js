@@ -42,9 +42,9 @@ class Counter extends Component {
     console.log(this);
     return (
       <div className="counter">
-        {/* <button className="minus" onClick={() => value.dispatch({ type: 'MINUS_ORDER' })} >-</button>
-        <input type="text" className='input-counter' value={value.state.totalOrder} />
-        <button className="plus" onClick={() => value.dispatch({ type: 'PLUS_ORDER' })} >+</button> */}
+        <button className="minus" onClick={() => this.props.dispatch({ type: 'MINUS_ORDER' })} >-</button>
+        <input type="text" className='input-counter' value={this.props.state.totalOrder} />
+        <button className="plus" onClick={() => this.props.dispatch({ type: 'PLUS_ORDER' })} >+</button>
       </div>
     )
   }

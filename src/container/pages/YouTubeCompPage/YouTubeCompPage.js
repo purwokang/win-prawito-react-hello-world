@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 // import { connect } from 'react-redux';
 import YouTubeComp from '../../../component/YouTubeComp/YouTubeComp';
+import { GlobalConsumer } from '../../../context/context';
 // import { RootContext } from '../../Home/Home';
 
 class YouTubeCompPage extends Component {
@@ -27,7 +28,7 @@ class YouTubeCompPage extends Component {
           desc='230x ditonton. 100 hari yang lalu.' />
         <YouTubeComp />
         <hr />
-        {/* <p>Total Order: {value.state.totalOrder}</p> */}
+        <p>Total Order: {this.props.state.totalOrder}</p>
       </Fragment>
     )
   }
@@ -40,4 +41,4 @@ class YouTubeCompPage extends Component {
 // }
 
 // export default connect(mapStateToProps)(YouTubeCompPage);
-export default YouTubeCompPage;
+export default GlobalConsumer(YouTubeCompPage);

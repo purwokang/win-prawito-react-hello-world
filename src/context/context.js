@@ -1,4 +1,4 @@
-import React, { Children, Component, createContext } from 'react';
+import React, { Component, createContext } from 'react';
 
 const RootContext = createContext();
 
@@ -42,7 +42,7 @@ export default GlobalProvider;
 
 // * Consumer
 const Consumer = RootContext.Consumer;
-export const GlobalConsumer = () => {
+export const GlobalConsumer = (Children) => {
     return (
         class ParentConsumer extends Component {
             render() {

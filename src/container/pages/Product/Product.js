@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { GlobalConsumer } from '../../../context/context';
 import CardProduct from './CardProduct/CardProduct';
 import './Product.css'
 // import { connect } from "react-redux";
@@ -27,7 +28,7 @@ class Product extends Component {
                     </div>
                     <div className="troley">
                         <img src="https://etanee.id/img/icon/ic_cart_white.svg" alt="" />
-                        {/* <div className="count">{value.state.totalOrder}</div> */}
+                        <div className="count">{this.props.state.totalOrder}</div>
                     </div>
                 </div>
                 <CardProduct />
@@ -43,4 +44,4 @@ class Product extends Component {
 // }
 
 // export default connect(mapStateToProps)(Product);
-export default Product;
+export default GlobalConsumer(Product);
