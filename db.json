@@ -601,12 +601,6 @@
       "userId": 1
     },
     {
-      "id": 1613550203874,
-      "title": "fdas",
-      "body": "dasfads",
-      "userId": 1
-    },
-    {
       "id": 1613554946746,
       "title": "belum berhasil tambah posting",
       "body": "belum berhasil tambah posting sejak oprek video 32\n\nkita cari bugnya ya coy...",
@@ -622,6 +616,12 @@
       "id": 1613555785692,
       "title": "Alhamdulillah Berhasil Menerapkan Service Global",
       "body": "Tutorial service global video 32 sudah OKE.\n\nAlhamdulillah!",
+      "userId": 1
+    },
+    {
+      "id": 1613556766364,
+      "title": "Refactoring Service Global",
+      "body": "Ini adalah refactoring service global, masih di video 32. semoga berhasil.\n\n\n---- edited\n\nAlhamdulillah berhasil!",
       "userId": 1
     }
   ],
