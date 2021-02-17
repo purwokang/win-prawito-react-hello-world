@@ -15,6 +15,18 @@ const Get = (path, root) => {
     return promise;
 }
 
+const Post = (path, root, data) => {
+    const promise = new Promise((resolve, reject) => {
+        axios.post(`${root ? OnlineRoot : RootPath}/${path}`, data)
+            .then((result) => {
+                resolve(result);
+            }, (err) => {
+                reject(err);
+            })
+    })
+    return promise
+}
+
 const getNewsBlog = () => Get('posts?_sort=id&_order=desc', false);
 const getComments = () => Get('comments', true);
 

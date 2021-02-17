@@ -130,11 +130,11 @@ class BlogPost extends Component {
                     <textarea name="body" id="body" cols="30" rows="10" value={this.state.formBlogPost.body} placeholder="add blog content" onChange={this.handleFormChange} ></textarea>
                     <button className="btn-submit" onClick={this.handleSubmit} >{this.state.tombolSimpan}</button>
                 </div>
-                {
+                {/* {
                     this.state.comments.map(comment => {
                         return <p>{comment.name} - {comment.email}</p>
                     })
-                }
+                } */}
                 {
                     this.state.post.map(post => {
                         return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} goDetail={this.handleDetail} />
