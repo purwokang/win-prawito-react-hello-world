@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Post from '../../../component/Post/Post';
 import './BlogPost.css';
 import API from '../../../services';
@@ -47,7 +47,7 @@ class BlogPost extends Component {
     }
 
     putDataToAPI = () => {
-        axios.put(`http://localhost:3004/posts/${this.state.formBlogPost.id}`, this.state.formBlogPost)
+        API.updateNewsBlog(this.state.formBlogPost, this.state.formBlogPost.id)
             .then(res => {
                 console.log(res);
                 this.getPostAPI();
@@ -62,16 +62,11 @@ class BlogPost extends Component {
                     tombolSimpan: 'simpan'
                 })
             })
-
     }
 
     handleRemove = (data) => {
-        // console.log(data);
-        // menjalankan server json di port 3004:
-        // json-server --watch db.json --port 3004
-        axios.delete(`http://localhost:3004/posts/${data}`)
+        API.deleteNewsBlog(data)
             .then((res) => {
-                // console.log(res);
                 this.getPostAPI()
             })
     }
